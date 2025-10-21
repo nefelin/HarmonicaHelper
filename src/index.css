@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom VW-based styles for responsive design */
+@layer components {
+  .note {
+    @apply w-[6vw] h-[6vw] min-w-[32px] min-h-[32px] max-w-[64px] max-h-[64px];
+  }
+  
+  .hole-number {
+    @apply w-[6.4vw] h-[4vw] min-w-[32px] min-h-[20px] max-w-[64px] max-h-[40px];
+  }
+  
+  .label {
+    @apply w-[8vw] min-w-[40px] max-w-[80px];
+  }
+  
+  .degree-button {
+    @apply min-w-[3.2vw] max-w-[40px];
+  }
+}
+
+/* Responsive font sizes */
+@layer utilities {
+  .text-responsive-title {
+    font-size: clamp(14px, 2.4vw, 24px);
+  }
+  
+  .text-responsive-info {
+    font-size: clamp(10px, 1.4vw, 14px);
+  }
+  
+  .text-responsive-note {
+    font-size: clamp(12px, 1.8vw, 18px);
+  }
+  
+  .text-responsive-note-name {
+    font-size: clamp(8px, 1.2vw, 12px);
+  }
+  
+  .text-responsive-degree {
+    font-size: clamp(10px, 1.2vw, 14px);
+  }
+  
+  .text-responsive-hole {
+    font-size: clamp(10px, 1.2vw, 14px);
+  }
+  
+  .text-responsive-label {
+    font-size: clamp(10px, 1.4vw, 14px);
+  }
+}
