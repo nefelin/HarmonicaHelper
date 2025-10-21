@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Header from './components/Header'
 import DegreeSelector from './components/DegreeSelector'
 import Harmonica from './components/Harmonica'

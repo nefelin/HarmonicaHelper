@@ -9,7 +9,7 @@ const InstallPrompt: React.FC = () => {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/service-worker.js')
-          .then(reg => console.log('Service Worker registered'))
+          .then(() => console.log('Service Worker registered'))
           .catch(err => console.log('Service Worker registration failed:', err))
       })
     }
@@ -41,7 +41,7 @@ const InstallPrompt: React.FC = () => {
     if (!deferredPrompt) return
 
     deferredPrompt.prompt()
-    const { outcome } = await deferredPrompt.userChoice
+    await deferredPrompt.userChoice
 
     setDeferredPrompt(null)
     setShowPrompt(false)

@@ -11,5 +11,7 @@ export default defineConfig({
         main: './index.html'
       }
     }
-  }
+  },
+  // For GitHub Pages deployment
+  base: process.env.NODE_ENV === 'production' ? '/HarmonicaHelper/' : '/'
 })
